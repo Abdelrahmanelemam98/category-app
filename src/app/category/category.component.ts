@@ -23,4 +23,12 @@ export class CategoryComponent {
       this.categoryList.set(category);
     });
   }
+
+  sendData(categoryName: string) {
+    const event = new CustomEvent('categorySelected', {
+      detail: { name: categoryName },
+    });
+    dispatchEvent(event);
+    console.log('Event dispatched for category:', categoryName);
+  }
 }

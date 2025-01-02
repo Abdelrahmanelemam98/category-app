@@ -2,7 +2,7 @@
   <div class="card">
     <ng-container *ngFor="let item of categoryList()">
       <ul>
-        <li>{{ item.name }}</li>
+        <li (click)="sendData(item.name)">{{ item.name }}</li>
       </ul>
     </ng-container>
   </div>
